@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: #0c0c0f;
+  color: #fff;
+  text-align: center;
+}
+
+main {
+  max-width: 1000px;   /* ограничиваем ширину */
+  margin: 0 auto;     /* центрируем контейнер */
+  text-align: left;   /* внутри — всё по левому краю */
+  padding: 0 20px;    
+}
+
+
+header {
+  background: url("src/images/bg.jpg") no-repeat center/cover;
+  padding: 20px;
+  min-height: 500px;
+}
+
+h1 span {
+  color: #a36bff;
+}
+
+.profile-pic {
+  width: 400px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.scroll-hint {
+  border-top: 2px solid #a36bff;
+  border-bottom: 2px solid #a36bff;
+  padding: 10px 0;
+}
+
+.scroll-hint p {
+  margin: 0;
+  color: #a36bff;
+  font-weight: bold;
+}
+
+
+/* ====== блок обо мне ====== */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  position: relative;
+  min-height: 500px; /* например */
+}
+
+
+
+.about-content {
+  flex: 1; /* левая колонка с текстом */
+  max-width: 60%;
+}
+
+.about-side {
+  flex: 1; /* правая колонка */
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* текст по левому краю */
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+.about-side::before {
+  content: 
+  "#TODO: сделать красиво";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 48px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.05); 
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+
+button {
+  background: #a36bff;
+  border: none;
+  padding: 12px 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #6e4baf;
+  transform: scale(1.05);
+}
+
+/* ====== табы ====== */
+.tabs {
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  background: #222;
+  color: #fff;
+}
+
+.tab-btn.active {
+  background: #a36bff;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content img {
+  width: 100%;
+  max-width: 250px;
+  margin-top: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.tab-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Общий стиль для всех списков внутри табов */
+.tabs .tab-content ul {
+  list-style: none; /* убираем маркеры */
+  padding: 0;
+  margin: 0;
+}
+
+.tabs .tab-content ul li::before {
+  content: "-- > "; /* стрелочка перед элементом */
+  color: #6c5591; /* цвет стрелочки */
+}
+
+.tabs .tab-content ul li a {
+  color: #6c5591; /* основной цвет ссылок */
+  text-decoration: none; /* убираем подчеркивание */
+  transition: color 0.3s;
+}
+
+.tabs .tab-content ul li a:hover {
+  color: #a36bff; /* цвет при наведении */
+}
+
+.link-list {
+  list-style: none; /* убираем маркеры */
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.link-list li::before {
+  content: "→ "; /* стрелка вместо маркера */
+  color: #a36bff; /* цвет стрелки */
+}
+
+.link-list a {
+  color: #fff; /* обычный цвет ссылки */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link-list a:hover {
+  color: #6e4baf; /* цвет при наведении */
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px; /* расстояние между картинками */
+  margin-top: 10px;
+}
+
+.photo-grid img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+
+/* ====== footer ====== */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #111;
+}
+
+footer a {
+  color: #a36bff;
+}
+
+/* ====== адаптив ====== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 22px;
+  }
+  .profile-pic {
+    width: 140px;
+  }
+  button {
+    padding: 10px 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 36px;
+  }
+  .profile-pic {
+    width: 250px;
+  }
+}
