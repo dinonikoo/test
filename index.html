@@ -1,90 +1,112 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>О Кате</title>
-  <link rel="stylesheet" href="katya.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuteProgrammers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Parisienne&family=Caveat&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles.css">
+    
+    <script src="src/script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Привет, меня зовут <span>Катя</span></h1>
-    <img src="src/images/katya.jpg" alt="Катя" class="profile-pic">
-  </header>
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="logo">
+                <img src="src/images/logo.png" alt="Наше лого">
+                <p>Cute Programmers</p>
+            </div>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="menu">
+        <p>БОКОВОЕ МЕНЮ!</p>
+        <ul>
+            <li><i class="fa-solid fa-house"></i><a href="index.html">ГЛАВНАЯ</a></li>
+            <li onclick="active_meme()"><i class="fa-solid fa-user"></i>О ЮЛЕ</li>
+            <li><i class="fa-solid fa-user"></i><a href="katya.html">О КАТЕ</a></li>
+            <li><i class="fa-solid fa-user"></i><a href="sonyaPage.html">О СОНЕ</a></li>
+            <li><i class="fa-solid fa-user"></i><a href="vika.html">О ВИКЕ</a></li>
+        </ul>
+    </div>
+    <div class="overlay"></div>
+    <main>
+        <section class="team_name">
+            <div class="team_text">
+                <div id="beautiful_block"></div>
+                <div class="text">
+                    <h1>Cute Progammers</h1>
+                    <p>Мы - команда милых программистов, уже прошедших 2 года учебы вместе. И мы не собираемся останавливаться!</p>
+                </div>
+            </div>
+            <div class="team_img"><img src="src/images/photo_2025-02-04_10-56-50(2).jpg"></div>
+        </section>
+        <div class="meme">
+            <img src="./src/images/RianGosling.jpg">
+            <button class="closeMeme" onclick="active_meme()"><i class="fa fa-times"></i></button>
+        </div>
+        <div class="overlayMeme"></div>
+        <section class="teammates">
+            <h1>НАША КОМАНДА</h1>
+            <div class="cards">
+                <div class="card card1 active">
+                    <img src="src/images/Ya.jpg">
+                    <div class="card_text">
+                        <p class="name">Юлия Серышева</p>
+                        <p class="description">Кьют прогер</p>
+                        <p class="more_desc">Написала эту страничку ляляля</p>
+                        <button class="learnmore" onclick="active_meme()">Подробнее</button>
+                    </div>
+                </div>
 
-<div class="scroll-hint">
-  <p>листай вниз</p>
-</div>
+                <div class="card card2">
+                    <img src="src/images/photo_2025-07-25_18-12-03.jpg">
+                    <div class="card_text">
+                        <p class="name">Екатерина Камаева</p>
+                        <p class="description">Кьют прогер</p>
+                        <p class="more_desc">Лучший спаситель просто люблю тебя муа</p>
+                        <button class="learnmore" onclick="window.location.href='katya.html'">Подробнее</button>
+                    </div>
+                </div>
 
-  <main>
-    <section class="about">
-  <div class="about-content">
-    <h2>>> обо мне</h2>
-    <p>мне 20 лет, родилась живу в Нижнем Новгороде //</p>
-    <p>// неравнодушна ко всему, что связано с играми, фильмами и изобразительным искусством //</p>
-    <p>// люблю японскую музыку</p>
-    <button id="toCollection">перейти к подборке</button>
-  </div>
-  <div class="about-side">
-  </div>
-</section>
+                <div class="card card3">
+                    <img src="src/images/Sonya.jpg">
+                    <div class="card_text">
+                        <p class="name">Софья Новикова</p>
+                        <p class="description">Кьют прогер</p>
+                        <p class="more_desc">Милашка программист, работает в Ядре офигеть</p>
+                        <button class="learnmore" onclick="window.location.href='sonyaPage.html'">Подробнее</button>
+                    </div>
+                </div>
 
+                <div class="card card4">
+                    <img src="src/images/Vika.jpg">
+                    <div class="card_text">
+                        <p class="name">Виктория Бузина</p>
+                        <p class="description">Кьют прогер</p>
+                        <p class="more_desc">Любимка, крутышка, роковая женщина - все про нее</p>
+                        <button class="learnmore" onclick="window.location.href='vika.html'">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
 
-    <section class="tabs">
-      <div class="tab-buttons">
-        <button class="tab-btn active" data-tab="anime">аниме</button>
-        <button class="tab-btn" data-tab="music">музыка</button>
-      </div>
-
-      <div id="anime" class="tab-content active">
-  <ul class="link-list">
-    <li><a href="https://www.crunchyroll.com" target="_blank">ковбой бибоп</a></li>
-    <li><a href="https://www.crunchyroll.com" target="_blank">тетрадь смерти</a></li>
-    <li><a href="https://www.crunchyroll.com" target="_blank">идеальная грусть</a></li>
-  </ul>
-  <div class="photo-grid">
-    <img src="src/images/bebop.jpg" alt="Cowboy Bebop">
-    <img src="src/images/deathnote.jpg" alt="Death Note">
-    <img src="src/images/perfectblue.jpg" alt="Perfect Blue">
-  </div>
-</div>
-
-<div id="music" class="tab-content">
-  <ul class="link-list">
-    <li><a href="https://www.youtube.com" target="_blank">soutaiseiriron</a></li>
-    <li><a href="https://www.youtube.com" target="_blank">yorushika</a></li>
-    <li><a href="https://www.youtube.com" target="_blank">mass of the fermenting dregs</a></li>
-  </ul>
-  <div class="photo-grid">
-    <img src="src/images/soutaiseiriron.jpg" alt="soutaiseiriron">
-    <img src="src/images/yorushika.jpg" alt="">
-    <img src="src/images/mass.jpg" alt="mass of the fermenting dregs">
-  </div>
-</div>
-
-    </section>
-  </main>
-
-  <footer>
-    <p>contact: <a href="https://t.me/dinoniko">@dinoniko</a></p>
-  </footer>
-
-  <script>
-    // Переключение табов
-    document.querySelectorAll(".tab-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
-        document.querySelectorAll(".tab-content").forEach(tab => tab.classList.remove("active"));
-        
-        btn.classList.add("active");
-        document.getElementById(btn.dataset.tab).classList.add("active");
-      });
-    });
-
-    // Переход к подборке
-    document.getElementById("toCollection").addEventListener("click", () => {
-      document.querySelector(".tabs").scrollIntoView({behavior: "smooth"});
-    });
-  </script>
+            </div>
+        </section>
+        <section class="conclusion">
+            <h1 id="quote">Все мы разные, но такие одинаковые</h1>
+            <h3 id="author">Юля в 12 часов ночи</h3>
+        </section>
+    </main>
+    <footer>
+        <p>Лучший футер на свете</p>
+        <p>Все вопросы по сайту сюда - <a href="https://t.me/Dreams_and_lights">@Dreams_and_lights</a></p>
+        <p>Спасибо, что досмотрели до конца!</p>
+    </footer>
 </body>
 </html>

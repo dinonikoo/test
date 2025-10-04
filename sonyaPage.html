@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuteProgrammers | Sofya Novikova</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Parisienne&family=Caveat&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/sonya_styles.css">
+    
+    <script src="src/script.js" defer></script>
+    <script src="src/sonya.js" defer></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="logo">
+                <img src="src/images/logo.png" alt="Наше лого">
+                <p>Cute Programmers</p>
+            </div>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="menu">
+        <p>БОКОВОЕ МЕНЮ!</p>
+        <ul>
+            <li><i class="fa-solid fa-house"></i><a href="index.html">ГЛАВНАЯ</a></li>
+            <li onclick="active_meme()"><i class="fa-solid fa-user"></i>О ЮЛЕ</li>
+            <li><i class="fa-solid fa-user"></i><a href="katya.html">О КАТЕ</a></li>
+            <li><i class="fa-solid fa-user"></i><a href="sonyaPage.html">О СОНЕ</a></li>
+            <li><i class="fa-solid fa-user"></i><a href="vika.html">О ВИКЕ</a></li>
+        </ul>
+    </div>
+    <div class="overlay"></div>
+    <main>
+        <section class="sonya_welcome">
+            <div class="sonya_text">
+                <div class="s_text">
+                    <h1>Обо мне</h1>
+                    <p>Всем привет!<br>Добро пожаловать на мою страницу! Меня зовут Софья Новикова.
+                    Буду рада рассказать о себе.</p>
+                    <button class="sonya_btn" onclick="scrollToFacts('sonya_facts')">Узнать больше</button>
+                </div>
+            </div>
+            <div class="sonya_img"><img src="src/images/Sonya.jpg" alt="Моя фотография"></div>
+        </section>
+        <div class="meme">
+            <img src="./src/images/RianGosling.jpg">
+            <button class="closeMeme" onclick="active_meme()"><i class="fa fa-times"></i></button>
+        </div>
+        <div class="overlayMeme"></div>
+        <section class="sonya_facts" id="sonya_facts">
+            <h2>5 фактов обо мне</h2>
+
+            <article class="fact fact_left">
+                <div class="fact_content">
+                    <h3>Учусь на 3 курсе Высшей школы экономики</h3>
+                    <p>Мой факультет называется факультет информатики, математики и компьютерных наук, 
+                        образовательная программа - <a href="https://nnov.hse.ru/ba/cst/" class="fact_link">компьютерные науки и технологии</a>, а если более узко, направление - 
+                        прикладные интеллектуальные и высоконагруженные системы. 
+                        Первые 2 года мы все учились по общей программе, а на 3 курсе был выбор между тремя направлениями: БИ + ПМИ,
+                        ПИ + БИ и ПМИ + ПИ. Своё направление я выбрала, потому что оно более практическое и интересное для меня.
+                        В <a href="https://nnov.hse.ru/" class="fact_link">Вышке</a> учиться сложно, но образование достойное! 
+                    </p>
+                    <p>Кстати, на фото изображен главный корпус на Большой Печёрской.</p>
+                </div>
+                <div class="fact_image">
+                    <img src="src/images/hse_nn.jpg" alt="Нижегородская Вышка">
+                </div>
+            </article>
+
+            <article class="fact fact_right">
+                <div class="fact_content">
+                    <h3>Работаю стажёром C++ в YADRO</h3>
+                    <p>Я работаю в отделе разработки ПО для микроконтроллеров в Радиочастотном центре. 
+                        Моя команда занимается разработкой графических клиентов на языке C++ с использованием фреймфорка Qt. 
+                        Мои задачи в основном связаны с усовершенствованием текущих виджетов или созданием новых.  
+                    </p>
+                    <p>На стажировку в <a href="https://yadro.com/" class="fact_link">YADRO</a> я устроилась благодаря ежегодной
+                         программе <a href="https://edu.yadro.com/impulse/?format=all&category=priority" class="fact_link">
+                        Импульс</a>. Чтобы на неё попасть я проходила отбор. Затем я стажировалась 2 месяца с графиком 40 часов. 
+                        Сейчас я подписала договор на длительную стажировку 20 часов до окончания университета.
+                    </p>
+                </div>
+                <div class="fact_image">
+                    <img src="src/images/yadro.png" alt="Офис Ядра">
+                </div>
+            </article>
+
+            <article class="fact fact_left">
+                <div class="fact_content">
+                    <h3>На 2 курсе училась в Москве</h3>
+                    <p>Это была программа <a href="https://www.hse.ru/studyspravka/vnutrmob" class="fact_link">внутриуниверситетской академической мобильности</a>, которая позволяет студентам 
+                        Высшей школы экономики поучиться в другом кампусе. Поскольку моя мечта - жить в Москве, я 
+                        решила попробовать принять участие в этой программе, чтобы испытать новый опыт.
+                         Нужно было составить индивидуальный учебный план, подать заявку и пройти отбор.
+                          В итоге всё получилось, я проучилась в Москве целый год. Это был незабываемый опыт,
+                          мне понравился корпус, как проходило обучение и конечно же Москва! Всем советую попробовать!
+                    </p>
+                </div>
+                <div class="fact_image">
+                    <img src="src/images/hse_msc.jpg" alt="Московская Вышка">
+                </div>
+            </article>
+
+            <article class="fact fact_right">
+                <div class="fact_content">
+                    <h3>У меня есть собака Васти</h3>
+                    <p>А вот и он, такой милашка, я его очень люблю! Ему 10 лет, порода у него неизвестная, но пёс замечательный.
+                        Он очень добрый к людям, никогда никого не кусал. Мне всегда нравился его окрас, мне кажется это необычно. Он появился у меня в 3 классе. 
+                    </p>
+                    <p>Васти любит играть в мячик, у него их много. Ещё у него есть игрушка - резиновая машинка, с которой он 
+                        преимущественно играл в деревне. Любимое лакомство пса - колбаса или косточки с утиной/куриной намоткой. 
+                        А на улицу Васти выходит 3 раза в день.
+                    </p>
+                </div>
+                <div class="fact_image">
+                    <img src="src/images/wasty.jpg" alt="Васти">
+                </div>
+            </article>
+
+            <article class="fact fact_left">
+                <div class="fact_content">
+                    <h3>Моё хобби - творчество</h3>
+                    <p>Я очень люблю делать вещи своими руками: вязать, шить, создавать поделки из разнообразных материалов, 
+                        рисовать картины по номерам и многое другое. Наверное вязание - самое любимое из этого списка. 
+                        Уменю вязать крючком и спицами, но чаще вяжу крючком. В основном это какие-то мелкие вещи: 
+                        игрушки, салфетки на стол, но однажды вязала шапку, шарф и футболку, но на это требуется много времени. 
+                    </p>
+                    <p>На фото изображён лягушонок, которого я связала последним.</p>
+                </div>
+                <div class="fact_image">
+                    <img src="src/images/frog.jpg" alt="Московская Вышка">
+                </div>
+            </article>
+
+        </section>
+    </main>
+    <footer>
+        <p>Лучший футер на свете</p>
+        <p>Страничка Сони - @sonya_novikova</p>
+        <p>Спасибо, что досмотрели до конца!</p>
+    </footer>
+</body>
+</html>

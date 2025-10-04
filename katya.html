@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>О Кате</title>
+  <link rel="stylesheet" href="src/katya.css">
+</head>
+<body>
+  
+<nav class="nav">
+    <div class="nav-content">
+        <div class="logo">
+            <img src="src/images/logo.png" alt="Наше лого">
+            <p>Cute Programmers</p>
+        </div>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+<div class="menu">
+    <p>БОКОВОЕ МЕНЮ!</p>
+    <ul>
+            <li><i class="fa-solid fa-house"></i><a href="index.html">ГЛАВНАЯ</a></li>
+            <li onclick="active_meme()"><i class="fa-solid fa-user"></i>О ЮЛЕ</li>
+            <li><i class="fa-solid fa-user"></i><a href="katya.html">О КАТЕ</a></li>
+            <li><i class="fa-solid fa-user"></i><a href="sonyaPage.html">О СОНЕ</a></li>
+            <li><i class="fa-solid fa-user"></i><a href="vika.html">О ВИКЕ</a></li>
+    </ul>
+</div>
+<div class="overlay"></div>
+
+
+
+  <header>
+    <h1>Привет, меня зовут <span>Катя</span></h1>
+    <img src="src/images/katya.jpg" alt="Катя" class="profile-pic">
+  </header>
+
+<div class="scroll-hint">
+  <p>листай вниз</p>
+</div>
+
+
+  <main>
+    <section class="about">
+<article class="about-content">
+    <h2>>> обо мне</h2>
+    <p>мне 20 лет, родилась живу в Нижнем Новгороде //</p>
+    <p>// неравнодушна ко всему, что связано с играми, фильмами и изобразительным искусством //</p>
+    <p>// люблю японскую музыку</p>
+    <button id="toCollection">перейти к подборке</button>
+    <div class="side-list">
+      <h3>>> харды</h3>
+      <p>// i can speak russian, english,</p>
+      <p>// Python, C++, Java</p>
+      <p>// and Go in progress</p>
+    </div>
+  </article>
+
+  <div class="menu">
+    <ul>
+      <h2>>> меню</h2>
+      <li><a href="index.html">вернуться на главную</a></li>
+      <p><a href="index.html">//  тут же и про Юлю</a></p>
+      <li><a href="sonyaPage.html">о Соне</a></li>
+      <li><a href="vika.html">о Вике</a></li>
+    </ul>
+  </div>
+</section>
+
+        <div class="meme">
+            <img src="./src/images/RianGosling.jpg">
+            <button class="closeMeme" onclick="active_meme()"><i class="fa fa-times"></i></button>
+        </div>
+        <div class="overlayMeme"></div>
+
+    <section class="tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="anime">аниме</button>
+        <button class="tab-btn" data-tab="music">музыка</button>
+      </div>
+
+      <div id="anime" class="tab-content active">
+  <ul class="link-list">
+    <li><a href="https://www.crunchyroll.com/ru/series/GYVNXMVP6/cowboy-bebop?srsltid=AfmBOooKjQ5Fz8zMZzzNm1_UHVDf1_Tc7lvfQ9tq9uvpGvRmMP8qvDGZ" target="_blank">ковбой бибоп</a></li>
+    <li><a href="https://www.crunchyroll.com/ru/series/G6QWD3EE6/death-note?srsltid=AfmBOoqechKZ6sr1vAVt5gpy_sc4ku_tauNCgrENEVPxUbbfG2YjYhxR" target="_blank">тетрадь смерти</a></li>
+    <li><a href="https://www.crunchyroll.com/ru/series/GZJH3D8V3/perfect-blue?srsltid=AfmBOoo2kAkPYJ33SpL_OpxczSDuUiAfmwPWVYNjhMIgD6S2jZhUYoUC" target="_blank">идеальная грусть</a></li>
+  </ul>
+  <div class="photo-grid">
+    <img src="src/images/bebop.jpg" alt="Cowboy Bebop">
+    <img src="src/images/deathnote.jpg" alt="Death Note">
+    <img src="src/images/perfectblue.jpg" alt="Perfect Blue">
+  </div>
+</div>
+
+<div id="music" class="tab-content">
+  <ul class="link-list">
+    <li><a href="https://www.youtube.com/channel/UC5FKBiDV811D4M9b7p28paA" target="_blank">soutaiseiriron</a></li>
+    <li><a href="https://www.youtube.com/@nbuna" target="_blank">yorushika</a></li>
+    <li><a href="https://www.youtube.com/channel/UC8HQ1Us0QsSb1i3UW6dJ26g" target="_blank">mass of the fermenting dregs</a></li>
+  </ul>
+  <div class="photo-grid">
+    <img src="src/images/soutaiseiriron.jpg" alt="soutaiseiriron">
+    <img src="src/images/yorushika.jpg" alt="yorushika">
+    <img src="src/images/mass.jpg" alt="mass of the fermenting dregs">
+  </div>
+</div>
+
+    </section>
+  </main>
+    <script src="src/script.js" ></script>
+   <script src="src/katya.js" ></script>
+  <footer>
+    <p>contact: <a href="https://t.me/dinoniko">@dinoniko</a></p>
+  </footer>
+</body>
+</html>

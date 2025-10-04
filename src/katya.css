@@ -1,0 +1,439 @@
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: #0c0c0f;
+  color: #fff;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #6c5591;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #a36bff;
+}
+
+header {
+  background: url("images/bg.jpg") no-repeat center/cover;
+  padding: 20px;
+  min-height: 500px;
+  text-align: center;
+}
+
+h1 span {
+  color: #a36bff;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.scroll-hint {
+  border-top: 2px solid #a36bff;
+  border-bottom: 2px solid #a36bff;
+  padding: 10px 0;
+  text-align: center; 
+}
+
+.scroll-hint p {
+  margin: 0;
+  color: #a36bff;
+  font-weight: bold;
+}
+
+.about {
+  display: flex;              
+  justify-content: center;     
+  gap: 40px;                   
+  padding: 40px 20px;
+}
+
+
+.about-content {
+  flex: 1;
+  max-width: 80%;
+}
+
+.side-list {
+  flex: 1;
+  font-size: 20px;
+  color: #8d859a;
+}
+
+.menu {
+  flex: 2;
+  max-width: 30%;         
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu li::before {
+  content: "-- > ";
+  color: #a36bff;
+}
+
+button {
+  background: #a36bff;
+  border: none;
+  padding: 12px 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+button:hover {
+  background: #6e4baf;
+  transform: scale(1.05);
+}
+
+.tabs {
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  background: #222;
+  color: #fff;
+}
+
+.tab-btn.active {
+  background: #a36bff;
+}
+
+.tab-content {
+  display: none;
+  text-align: center; 
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content img {
+  display: block;
+  margin: 15px auto;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.tab-content img:hover {
+  transform: scale(1.05);
+}
+
+.tabs ul li::before {
+  content: "-- > ";
+  color: #6c5591;
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.link-list li::before {
+  content: "→ ";
+  color: #a36bff;
+}
+
+.photo-grid {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;          
+  gap: 20px;              
+  margin: 20px auto;       
+  max-width: 900px;         
+}
+
+.photo-grid img {
+  width: 250px;            
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #ffffff0d;
+  text-align: center; 
+}
+
+footer a {
+  color: #a36bff;
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-content,
+  .side-list,
+  .menu {
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .menu {
+    justify-content: flex-start;
+  }
+  .nav-content {
+        padding: 5px 15px;
+    }
+
+    .nav-content img {
+        width: 80px;
+    }
+
+    .logo p {
+        font-size: 28px;
+    }
+
+    .burger {
+        width: 35px;
+        height: 25px;
+    }
+
+    .burger span {
+        height: 3px;
+    }
+
+    .menu {
+        width: 100%;
+        max-width: 100%;
+        padding: 60px 20px;
+        font-size: 18px;
+    }
+
+    .menu p {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .menu li {
+        margin: 12px 0;
+        gap: 10px;
+    }
+}
+
+/* Навигация */
+.nav {
+    border-bottom: 2px solid rgb(38, 27, 55);
+}
+.nav-content {
+    padding: 5px 20px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-content img{
+    width: 100px;
+    height: auto;
+}
+.logo p{
+    font-family: 'Parisienne', cursive;
+    font-size: 35px;
+    margin-left: 10px;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+}
+.burger span{
+    background-color: rgb(95, 62, 146);
+    display: block;
+    height: 4px;
+    border-radius: 18%;
+}
+
+/* Боковое меню */
+.menu {
+    position: fixed;
+    right:-100%;
+    top:0;
+    height: 100%;
+    width: 80%;
+    max-width: 300px;
+    padding: 60px 50px;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: rgb(38, 27, 55);
+    font-size: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 0px 12px -2px;
+    transition: right 0.5s ease;
+    z-index: 300;
+}
+.menu.active{
+    right:0;
+}
+.menu p{
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu li{
+    width: max-content;
+    margin: 18px;
+    padding: 6px 6px;
+    display: flex;
+    justify-content: first baseline;
+    gap: 14px;
+    transition: all 0.5s ease;
+}
+.menu li:hover{
+    font-size: 21px;
+    background-color: rgba(190, 179, 196, 0.603);
+    box-shadow: 0px 3px 10px -4px rgb(38, 27, 55);
+    border-radius: 8%;
+    transform: translateY(-3px);
+}
+.menu a{
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+.menu a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.327);
+    z-index: 200;
+}
+.overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Мем */
+.meme{
+    visibility: hidden;
+    object-fit: cover;
+    position: fixed;
+    z-index: 500;
+    top:50%;
+    left: 50%;
+    max-width: 600px;
+    transform: translate(-50%, -50%);
+}
+
+.meme.active{
+    visibility: visible;
+}
+
+.meme img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.meme.active img{
+    opacity: 1;
+}
+
+.overlayMeme {
+    position: fixed;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.327);
+    z-index: 400;
+}
+.overlayMeme.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.meme button{
+    position: absolute;
+    top:10px;
+    right:10px;
+    border-radius: 50%;
+    width:35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(196, 171, 150, 0.777);
+    border: none;
+    font-size: 14px;
+    color:rgb(51, 29, 29);
+}
+
