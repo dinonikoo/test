@@ -1,17 +1,19 @@
-// переключение вкладок
-const tabs = document.querySelectorAll(".tab-btn");
-const contents = document.querySelectorAll(".tab-content");
-
-tabs.forEach(btn => {
+document.querySelectorAll(".tab-btn").forEach(btn => {
   btn.addEventListener("click", () => {
-    tabs.forEach(b => b.classList.remove("active"));
-    contents.forEach(c => c.classList.remove("active"));
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".tab-content").forEach(tab => tab.classList.remove("active"));
+    
     btn.classList.add("active");
     document.getElementById(btn.dataset.tab).classList.add("active");
   });
 });
 
-// кнопка "перейти к подборке"
-document.getElementById("to-selection").addEventListener("click", () => {
-  document.querySelector(".tabs").scrollIntoView({ behavior: "smooth" });
-});
+const toCollectionBtn = document.getElementById("toCollection");
+if (toCollectionBtn) {
+  toCollectionBtn.addEventListener("click", () => {
+    const tabs = document.querySelector(".tabs");
+    if (tabs) {
+      tabs.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+}

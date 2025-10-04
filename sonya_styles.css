@@ -1,0 +1,240 @@
+/* Sonya page styles */
+
+.sonya_welcome{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2px;
+    min-height: 730px;
+    background: rgba(224, 219, 215, 0.893);
+}
+
+.sonya_text{
+    position: relative;
+    flex: 1 1 50%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 730px;
+}
+
+.s_text {
+    position: absolute;
+    top: 25%;
+    left:8%;
+    font-family: "Playfair Display", serif;
+    color:  rgb(51, 29, 29);
+}
+
+.s_text h1{
+    font-size: 55px;
+    margin-bottom: 7%;
+}
+
+.s_text p{
+    font-size: 25px;
+    width: 65%;
+    margin-bottom: 7%;
+}
+
+.sonya_img{
+    flex: 1 1 50%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 730px;
+    background: none;
+}
+
+.sonya_img img{
+    width: 70%;
+    object-fit: cover;
+    max-width: 500px;
+}
+
+.sonya_btn {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    padding: 15px 30px;
+    background-color: rgb(51, 29, 29);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sonya_btn:hover {
+    background-color: rgba(51, 29, 29, 0.8);
+}
+
+.sonya_facts{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    min-height: 750px;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.sonya_facts h2{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 45px;
+    letter-spacing: 5px;
+    color:  rgb(51, 29, 29);
+    font-family: "Playfair Display", serif;
+    width: 100%;
+}
+
+.fact{
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    margin-bottom: 80px;
+    max-width: 1400px;
+    width: 95%;
+    padding: 0 100px;
+}
+
+.fact_left {
+    flex-direction: row;
+}
+
+.fact_right{
+    flex-direction: row-reverse;
+}
+
+.fact_content {
+    flex: 1;
+}
+
+.fact_content h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: rgb(51, 29, 29);
+    font-family: "Playfair Display", serif;
+}
+
+.fact_content p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: rgb(51, 29, 29);
+}
+
+.fact_image {
+    flex: 1;
+}
+
+.fact_image img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+}
+
+.fact_link {
+    color: rgb(192, 169, 134);
+    text-decoration: none;
+}
+
+.fact_link:hover {
+    color: rgb(125, 111, 85);
+}
+
+@media (max-width: 768px) {
+    .sonya_welcome {
+        flex-direction: column;
+        min-height: auto;
+        padding: 20px 0;
+    }
+    
+    .sonya_img, 
+    .sonya_text {
+        flex: 1 1 100%;
+        max-width: 100%;
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    
+    .sonya_img img {
+        width: 85%;
+        max-width: 300px;
+    }
+    
+    .s_text {
+        position: static;
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .s_text h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    
+    .s_text p {
+        font-size: 18px;
+        width: 100%;
+        margin-bottom: 25px;
+        line-height: 1.5;
+    }
+    
+    .sonya_btn {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+    
+    .sonya_facts {
+        padding: 20px 0;
+        min-height: auto;
+    }
+    
+    .sonya_facts h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+        letter-spacing: 2px;
+        padding: 0 15px;
+    }
+    
+    .fact {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 50px;
+        padding: 0 20px;
+        width: 90%;
+    }
+    
+    .fact_left,
+    .fact_right {
+        flex-direction: column;
+    }
+    
+    .fact_content {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .fact_content h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .fact_content p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .fact_image {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .fact_image img {
+        max-width: 100%;
+    }
+    footer{
+        font-size: 13px;
+    }
+}
